@@ -1,0 +1,31 @@
+<section class="list__wrap">
+  <div class="search">
+    <h1>Search artists</h1>
+    <label>Search : </label>
+    <input ng-model="query" placeholder="Enter the name" autofocus>
+    <label>Order :
+      <select ng-model="artistOrder">
+        <option value="name">Name</option>
+        <option value="reknown">Info</option>
+      </select>
+    </label>
+    <label>
+      <input ng-model="direction" type="radio" name="direction" checked>昇順
+      <input ng-model="direction" type="radio" name="direction" value="reverse">降順
+      <input>
+    </label>
+  </div>
+  <div>
+    <ul class="list">
+      <li ng-repeat="item in artists | filter:query | orderBy: artistOrder:direction">
+        <a>
+          <img ng-src="images/{{item.shortname}}.png" alt="photo">
+          <div class="info">
+            <h1>{{item.name}}</h1>
+            <p>{{item.reknown}}</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>

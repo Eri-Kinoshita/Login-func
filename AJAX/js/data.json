@@ -1,0 +1,19 @@
+$(function(){
+
+  $('#btn')on('click', getData);
+
+  function getData(){
+
+    var target_url = 'data.json';
+
+    $.ajax({
+
+    }).fail( function( jqXHR, textStatus, error){
+
+
+    }).done( function(){
+
+    })
+  }
+
+});
