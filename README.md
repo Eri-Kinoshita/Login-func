@@ -1,2 +1,6 @@
 # programming-learning
-login function with PHP
+My stock programming code
+
+- Angular1,2
+- AJAX
+- PHP
